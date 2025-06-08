@@ -44,9 +44,9 @@ const AboutSection = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-neon-blue to-neon-green rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
               <div className="relative bg-dark-700 rounded-2xl p-6 border border-dark-600 group-hover:border-neon-blue/50 transition-all duration-300">
                 <img
-                  src="/lovable-uploads/91ddbc14-61e9-4fc8-b23d-10035cfeb5cf.png"
+                  src="https://postimage.me/image/2345.UqsQta"
                   alt="Daan Reddy A - Web Developer"
-                  className="w-full h-80 object-cover rounded-xl"
+                  className="w-full h-80 object-cover object-center rounded-xl"
                 />
                 <div className="mt-6 text-center">
                   <h3 className="text-xl font-semibold text-white mb-2">Daan Reddy A</h3>

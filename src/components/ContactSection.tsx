@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Github, Linkedin, Send } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -29,9 +29,18 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await emailjs.send(
+        'service_2ys4y9q',
+        'template_r1jnsyr',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        'cnDoauiqUh1ZmcX8f'
+      );
       
       toast({
         title: "Message Sent!",
@@ -45,6 +54,7 @@ const ContactSection = () => {
         message: ''
       });
     } catch (error) {
+      console.error('Error sending email:', error);
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",

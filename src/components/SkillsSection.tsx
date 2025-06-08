@@ -1,47 +1,37 @@
 
 import { Code, Database, Palette, Video, Brain, Users } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
 
 const SkillsSection = () => {
   const technicalSkills = [
-    { name: 'HTML/CSS3', level: 90, icon: <Code className="w-5 h-5" /> },
-    { name: 'JavaScript', level: 85, icon: <Code className="w-5 h-5" /> },
-    { name: 'SQL', level: 80, icon: <Database className="w-5 h-5" /> },
-    { name: 'Core Java', level: 75, icon: <Code className="w-5 h-5" /> },
-    { name: 'UI/UX Design', level: 88, icon: <Palette className="w-5 h-5" /> },
-    { name: 'Video Editing', level: 82, icon: <Video className="w-5 h-5" /> }
+    { name: 'HTML/CSS3', icon: <Code className="w-5 h-5" /> },
+    { name: 'JavaScript', icon: <Code className="w-5 h-5" /> },
+    { name: 'SQL', icon: <Database className="w-5 h-5" /> },
+    { name: 'Core Java', icon: <Code className="w-5 h-5" /> },
+    { name: 'UI/UX Design', icon: <Palette className="w-5 h-5" /> },
+    { name: 'Video Editing', icon: <Video className="w-5 h-5" /> }
   ];
 
   const softSkills = [
-    { name: 'Communication', level: 92, icon: <Users className="w-5 h-5" /> },
-    { name: 'Time Management', level: 88, icon: <Brain className="w-5 h-5" /> },
-    { name: 'Teamwork', level: 90, icon: <Users className="w-5 h-5" /> },
-    { name: 'Emotional Intelligence', level: 85, icon: <Brain className="w-5 h-5" /> },
-    { name: 'Adaptability', level: 95, icon: <Brain className="w-5 h-5" /> },
-    { name: 'Problem Solving', level: 90, icon: <Brain className="w-5 h-5" /> }
+    { name: 'Communication', icon: <Users className="w-5 h-5" /> },
+    { name: 'Time Management', icon: <Brain className="w-5 h-5" /> },
+    { name: 'Teamwork', icon: <Users className="w-5 h-5" /> },
+    { name: 'Emotional Intelligence', icon: <Brain className="w-5 h-5" /> },
+    { name: 'Adaptability', icon: <Brain className="w-5 h-5" /> },
+    { name: 'Problem Solving', icon: <Brain className="w-5 h-5" /> }
   ];
 
   const SkillCard = ({ title, skills }: { title: string; skills: typeof technicalSkills }) => (
     <Card className="bg-dark-700/50 border-dark-600 hover:border-neon-blue/50 transition-all duration-300">
       <CardContent className="p-6">
         <h3 className="text-xl font-semibold mb-6 gradient-text">{title}</h3>
-        <div className="space-y-4">
+        <div className="grid grid-cols-2 gap-4">
           {skills.map((skill, index) => (
-            <div key={index} className="group">
-              <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center space-x-2">
-                  <span className="text-neon-blue group-hover:text-neon-green transition-colors duration-200">
-                    {skill.icon}
-                  </span>
-                  <span className="text-gray-300 font-medium">{skill.name}</span>
-                </div>
-                <span className="text-neon-blue font-semibold">{skill.level}%</span>
-              </div>
-              <Progress 
-                value={skill.level} 
-                className="h-2 bg-dark-800"
-              />
+            <div key={index} className="group flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg hover:bg-dark-800 transition-all duration-200">
+              <span className="text-neon-blue group-hover:text-neon-green transition-colors duration-200">
+                {skill.icon}
+              </span>
+              <span className="text-gray-300 font-medium">{skill.name}</span>
             </div>
           ))}
         </div>
@@ -66,30 +56,6 @@ const SkillsSection = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <SkillCard title="Technical Skills" skills={technicalSkills} />
           <SkillCard title="Soft Skills" skills={softSkills} />
-        </div>
-
-        {/* Additional Skills */}
-        <div className="mt-12 text-center">
-          <h3 className="text-2xl font-semibold mb-6 gradient-text">Additional Expertise</h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            {[
-              'AI Productivity Tools',
-              'Photo Editing',
-              'Electronics',
-              'Music Production',
-              'Responsive Design',
-              'Cross-browser Compatibility',
-              'Version Control (Git)',
-              'Agile Methodology'
-            ].map((skill) => (
-              <span 
-                key={skill}
-                className="px-4 py-2 bg-dark-700 border border-neon-green/30 rounded-full text-neon-green text-sm hover:bg-neon-green/10 transition-all duration-200 transform hover:scale-105"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
     </section>
