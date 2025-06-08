@@ -1,6 +1,7 @@
 
 import { GraduationCap, Heart, Zap } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const AboutSection = () => {
   const education = [
@@ -42,18 +43,20 @@ const AboutSection = () => {
           <div className="lg:col-span-1">
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-neon-blue to-neon-green rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-              <div className="relative bg-dark-700 rounded-2xl p-6 border border-dark-600 group-hover:border-neon-blue/50 transition-all duration-300">
-                <img
-                  src="/lovable-uploads/2a428680-69f1-4483-a8a4-abc33fe9f70a.png"
-                  alt="Daan Reddy A - Web Developer"
-                  className="w-full h-80 object-cover object-center rounded-xl"
-                />
-                <div className="mt-6 text-center">
-                  <h3 className="text-xl font-semibold text-white mb-2">Daan Reddy A</h3>
-                  <p className="text-neon-blue font-medium">Web Developer & UI/UX Designer</p>
-                  <div className="flex justify-center space-x-2 mt-4">
+              <div className="relative bg-dark-700 rounded-2xl p-4 sm:p-6 border border-dark-600 group-hover:border-neon-blue/50 transition-all duration-300">
+                <AspectRatio ratio={3/4} className="overflow-hidden rounded-xl">
+                  <img
+                    src="/lovable-uploads/a37cac62-07ed-4cd2-9ac6-c4b757bc7f28.png"
+                    alt="Daan Reddy A - Web Developer"
+                    className="w-full h-full object-cover object-center"
+                  />
+                </AspectRatio>
+                <div className="mt-4 sm:mt-6 text-center">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Daan Reddy A</h3>
+                  <p className="text-neon-blue font-medium text-sm sm:text-base">Web Developer & UI/UX Designer</p>
+                  <div className="flex justify-center space-x-2 mt-3 sm:mt-4">
                     <div className="w-2 h-2 bg-neon-green rounded-full animate-pulse"></div>
-                    <span className="text-neon-green text-sm">Available for projects</span>
+                    <span className="text-neon-green text-xs sm:text-sm">Available for projects</span>
                   </div>
                 </div>
               </div>
