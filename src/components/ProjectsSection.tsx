@@ -19,8 +19,7 @@ const ProjectsSection = () => {
         'User-friendly interface'
       ],
       color: 'neon-blue',
-      category: 'Software Development',
-      githubUrl: 'https://github.com/daanreddy/quiz-app'
+      category: 'Software Development'
     },
     {
       title: 'Hybrid PSW Power Generation System',
@@ -35,8 +34,7 @@ const ProjectsSection = () => {
         'Arduino-based control system'
       ],
       color: 'neon-green',
-      category: 'Hardware Engineering',
-      githubUrl: null
+      category: 'Hardware Engineering'
     }
   ];
 
@@ -126,25 +124,13 @@ const ProjectsSection = () => {
                       <ExternalLink className="w-4 h-4 mr-2" />
                       View Details
                     </Button>
-                    {project.githubUrl ? (
-                      <Button
-                        variant="outline"
-                        className="flex-1 border-neon-green text-neon-green hover:bg-neon-green hover:text-dark-900 transition-all duration-300"
-                        onClick={() => window.open(project.githubUrl, '_blank')}
-                      >
-                        <Github className="w-4 h-4 mr-2" />
-                        Source Code
-                      </Button>
-                    ) : (
-                      <Button
-                        variant="outline"
-                        className="flex-1 border-gray-600 text-gray-400 cursor-not-allowed"
-                        disabled
-                      >
-                        <Github className="w-4 h-4 mr-2" />
-                        Private Code
-                      </Button>
-                    )}
+                    <Button
+                      variant="outline"
+                      className="flex-1 border-neon-green text-neon-green hover:bg-neon-green hover:text-dark-900 transition-all duration-300"
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      Source Code
+                    </Button>
                   </div>
                 </div>
               </CardContent>
