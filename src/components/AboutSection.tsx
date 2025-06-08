@@ -99,23 +99,31 @@ const AboutSection = () => {
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold mb-6 gradient-text">Education</h3>
               
-              {education.map((edu, index) => (
-                <Card key={index} className="bg-dark-700/50 border-dark-600 hover:border-neon-blue/50 transition-all duration-300 group">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="text-neon-blue group-hover:text-neon-green transition-colors duration-200">
-                        {edu.icon}
+              <div className="space-y-4">
+                {education.map((edu, index) => (
+                  <Card key={index} className="bg-dark-700/50 border-dark-600 hover:border-neon-blue/50 transition-all duration-300 group">
+                    <CardContent className="p-4">
+                      <div className="flex items-center space-x-4">
+                        <div className="text-neon-blue group-hover:text-neon-green transition-colors duration-200 flex-shrink-0">
+                          {edu.icon}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                            <div>
+                              <h4 className="font-semibold text-white text-sm sm:text-base">{edu.institution}</h4>
+                              <p className="text-neon-blue text-sm">{edu.degree}</p>
+                            </div>
+                            <div className="text-right sm:text-left">
+                              <p className="text-gray-400 text-xs sm:text-sm">{edu.duration}</p>
+                              <p className="text-neon-green font-medium text-sm">{edu.grade}</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-white mb-1">{edu.institution}</h4>
-                        <p className="text-neon-blue mb-1">{edu.degree}</p>
-                        <p className="text-gray-400 text-sm mb-1">{edu.duration}</p>
-                        <p className="text-neon-green font-medium">{edu.grade}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
         </div>
