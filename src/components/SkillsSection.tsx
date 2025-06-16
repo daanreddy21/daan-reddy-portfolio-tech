@@ -1,3 +1,4 @@
+
 import { Code, Database, Palette, Video, Brain, Users } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -7,8 +8,7 @@ const SkillsSection = () => {
     { name: 'JavaScript', icon: <Code className="w-5 h-5" /> },
     { name: 'SQL', icon: <Database className="w-5 h-5" /> },
     { name: 'Core Java', icon: <Code className="w-5 h-5" /> },
-    { name: 'UI/UX Design', icon: <Palette className="w-5 h-5" /> },
-    { name: 'Video Editing', icon: <Video className="w-5 h-5" /> }
+    { name: 'UI/UX Design', icon: <Palette className="w-5 h-5" /> }
   ];
 
   const softSkills = [
