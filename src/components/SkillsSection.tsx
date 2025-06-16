@@ -1,3 +1,4 @@
+
 import { Code, Database, Palette, Video, Brain, Users } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -16,7 +17,10 @@ const SkillsSection = () => {
     { name: 'Teamwork', icon: <Users className="w-5 h-5" /> },
     { name: 'Emotional Intelligence', icon: <Brain className="w-5 h-5" /> },
     { name: 'Adaptability', icon: <Brain className="w-5 h-5" /> },
-    { name: 'Problem Solving', icon: <Brain className="w-5 h-5" /> },
+    { name: 'Problem Solving', icon: <Brain className="w-5 h-5" /> }
+  ];
+
+  const nonTechnicalSkills = [
     { name: 'Video Editing', icon: <Video className="w-5 h-5" /> }
   ];
 
@@ -52,9 +56,10 @@ const SkillsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
           <SkillCard title="Technical Skills" skills={technicalSkills} />
           <SkillCard title="Soft Skills" skills={softSkills} />
+          <SkillCard title="Non Technical Skills" skills={nonTechnicalSkills} />
         </div>
       </div>
     </section>
