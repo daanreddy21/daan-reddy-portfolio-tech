@@ -105,7 +105,7 @@
   }
 
   .section-padding {
-    @apply py-20 px-4 md:px-8 lg:px-16;
+    @apply py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8;
   }
 }
 
@@ -137,4 +137,23 @@
 .particle:nth-child(3n) {
   background: rgba(139, 92, 246, 0.3);
   animation-delay: -4s;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px); 
+  }
+  33% { 
+    transform: translateY(-10px) translateX(5px); 
+  }
+  66% { 
+    transform: translateY(5px) translateX(-5px); 
+  }
+}
+
+/* Responsive typography improvements */
+@media (max-width: 640px) {
+  .particles {
+    display: none; /* Hide particles on very small screens for performance */
+  }
 }
