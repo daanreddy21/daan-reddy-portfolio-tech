@@ -1,4 +1,3 @@
-
 import { GraduationCap, Heart, Zap } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
@@ -6,7 +5,7 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 const AboutSection = () => {
   const education = [
     {
-      institution: "KUPM Engineering College",
+      institution: "Kuppam Engineering College",
       degree: "CSE",
       duration: "Oct 2022 – Present",
       grade: "75%",
