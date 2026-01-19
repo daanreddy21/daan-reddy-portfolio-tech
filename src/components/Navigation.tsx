@@ -34,10 +34,9 @@ const Navigation = () => {
   };
 
   const downloadResume = () => {
-    // In a real implementation, this would link to an actual resume file
     const link = document.createElement('a');
-    link.href = '#'; // Replace with actual resume URL
-    link.download = 'Daan_Reddy_Resume.pdf';
+    link.href = '/Daan_Resume_Full_Stack_Developer.pdf';
+    link.download = 'Daan_Resume_Full_Stack_Developer.pdf';
     link.click();
   };
 
