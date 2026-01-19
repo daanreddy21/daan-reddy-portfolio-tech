@@ -1,5 +1,5 @@
 
-import { Code, Database, Palette, Video, Brain, Users } from 'lucide-react';
+import { Code, Database, Palette, Video, Wrench, GitBranch, Server } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const SkillsSection = () => {
@@ -8,16 +8,21 @@ const SkillsSection = () => {
     { name: 'JavaScript', icon: <Code className="w-5 h-5" /> },
     { name: 'SQL', icon: <Database className="w-5 h-5" /> },
     { name: 'Core Java', icon: <Code className="w-5 h-5" /> },
-    { name: 'UI/UX Design', icon: <Palette className="w-5 h-5" /> }
+    { name: 'Servlets', icon: <Server className="w-5 h-5" /> },
+    { name: 'JDBC', icon: <Database className="w-5 h-5" /> },
+    { name: 'REST APIs', icon: <Server className="w-5 h-5" /> },
+    { name: 'Bootstrap', icon: <Palette className="w-5 h-5" /> },
+    { name: 'Spring Boot', icon: <Server className="w-5 h-5" /> },
+    { name: 'MongoDB', icon: <Database className="w-5 h-5" /> },
+    { name: 'Git/GitHub', icon: <GitBranch className="w-5 h-5" /> }
   ];
 
-  const softSkills = [
-    { name: 'Communication', icon: <Users className="w-5 h-5" /> },
-    { name: 'Time Management', icon: <Brain className="w-5 h-5" /> },
-    { name: 'Teamwork', icon: <Users className="w-5 h-5" /> },
-    { name: 'Emotional Intelligence', icon: <Brain className="w-5 h-5" /> },
-    { name: 'Adaptability', icon: <Brain className="w-5 h-5" /> },
-    { name: 'Problem Solving', icon: <Brain className="w-5 h-5" /> }
+  const developerTools = [
+    { name: 'VS Code', icon: <Wrench className="w-5 h-5" /> },
+    { name: 'Eclipse', icon: <Wrench className="w-5 h-5" /> },
+    { name: 'Colab', icon: <Wrench className="w-5 h-5" /> },
+    { name: 'Postman', icon: <Wrench className="w-5 h-5" /> },
+    { name: 'MySQL Workbench', icon: <Database className="w-5 h-5" /> }
   ];
 
   const nonTechnicalSkills = [
@@ -58,7 +63,7 @@ const SkillsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <SkillCard title="Technical Skills" skills={technicalSkills} />
-          <SkillCard title="Soft Skills" skills={softSkills} />
+          <SkillCard title="Developer Tools" skills={developerTools} />
           <div className="md:col-span-2 lg:col-span-1">
             <SkillCard title="Non Technical Skills" skills={nonTechnicalSkills} />
           </div>
