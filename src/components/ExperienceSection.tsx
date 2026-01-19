@@ -23,7 +23,7 @@ const ExperienceSection = () => {
                     <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-neon-blue" />
                   </div>
                   <div className="min-w-0">
-                    <h3 className="text-lg sm:text-xl font-semibold text-white">Frontend Web Developer</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold text-white">Web Developer</h3>
                     <p className="text-neon-blue font-medium text-sm sm:text-base">Sel Edutech Solutions</p>
                   </div>
                 </div>
@@ -31,11 +31,15 @@ const ExperienceSection = () => {
                 <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 text-gray-400">
                   <div className="flex items-center space-x-2">
                     <Calendar className="w-4 h-4 flex-shrink-0" />
-                    <span className="text-sm">4 months</span>
+                    <span className="text-sm">1 year</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <MapPin className="w-4 h-4 flex-shrink-0" />
                     <span className="text-sm">Kuppam</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Briefcase className="w-4 h-4 flex-shrink-0" />
+                    <span className="text-sm">Hybrid</span>
                   </div>
                 </div>
               </div>
