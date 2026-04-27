@@ -1,45 +1,57 @@
 
-import { Palette, Code, Video, ArrowRight } from 'lucide-react';
+import { Server, Layers, Database, Wrench, ArrowRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: <Palette className="w-8 h-8" />,
-      title: 'UI/UX Design',
-      description: 'Creating intuitive and visually appealing user interfaces that provide exceptional user experiences across all devices.',
+      icon: <Server className="w-8 h-8" />,
+      title: 'Backend Development',
+      description: 'Designing and developing robust backend systems using Java, Spring Boot, and Node.js. Focused on building scalable APIs, handling business logic, and ensuring efficient server-side performance.',
       features: [
-        'User Research & Analysis',
-        'Wireframing & Prototyping',
-        'Visual Design & Branding',
-        'Usability Testing'
+        'REST API Development',
+        'Business Logic Implementation',
+        'MVC Architecture Design',
+        'Performance Optimization'
       ],
       color: 'neon-blue'
     },
     {
-      icon: <Code className="w-8 h-8" />,
-      title: 'Web Design & Development',
-      description: 'Building responsive, fast, and modern websites using cutting-edge technologies and best practices.',
+      icon: <Layers className="w-8 h-8" />,
+      title: 'Full Stack Web Development',
+      description: 'Building complete end-to-end web applications by integrating frontend and backend technologies. Ensuring smooth client-server communication and responsive user interfaces.',
       features: [
-        'Responsive Web Design',
-        'Frontend Development',
-        'Database Integration',
-        'Performance Optimization'
+        'Frontend Development (React, HTML, CSS, JavaScript)',
+        'Backend Integration',
+        'Database Connectivity',
+        'Responsive Design'
       ],
       color: 'neon-green'
     },
     {
-      icon: <Video className="w-8 h-8" />,
-      title: 'Video Editing',
-      description: 'Professional video editing services to bring your content to life with engaging visuals and smooth transitions.',
+      icon: <Database className="w-8 h-8" />,
+      title: 'Database & Data Management',
+      description: 'Designing efficient database systems and writing optimized queries for real-world applications. Ensuring data accuracy, validation, and performance.',
       features: [
-        'Video Production',
-        'Motion Graphics',
-        'Color Correction',
-        'Audio Enhancement'
+        'SQL Query Optimization',
+        'Database Design (MySQL, PostgreSQL, MongoDB)',
+        'Data Cleaning & Validation',
+        'Structured Data Handling'
       ],
       color: 'neon-purple'
+    },
+    {
+      icon: <Wrench className="w-8 h-8" />,
+      title: 'Code Quality & Developer Tools',
+      description: 'Developing tools and solutions to improve code quality, readability, and maintainability. Focused on identifying issues and enhancing development standards.',
+      features: [
+        'Code Analysis & Optimization',
+        'Debugging & Issue Detection',
+        'Clean Code Practices',
+        'Automation with CI/CD'
+      ],
+      color: 'neon-blue'
     }
   ];
 
@@ -52,12 +64,11 @@ const ServicesSection = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-neon-blue to-neon-green mx-auto mb-6"></div>
           <p className="text-base sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-            Comprehensive digital solutions tailored to bring your ideas to life 
-            with creativity and technical excellence.
+            Technical solutions focused on backend development, full-stack applications, and efficient data handling.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-8">
           {services.map((service, index) => (
             <Card 
               key={index} 
