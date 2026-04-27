@@ -83,7 +83,7 @@ const ContactSection = () => {
     {
       icon: <MapPin className="w-5 h-5" />,
       label: 'Location',
-      value: 'Kuppam, India',
+      value: 'Tirupati, India',
       href: '#',
       color: 'neon-purple'
     }
