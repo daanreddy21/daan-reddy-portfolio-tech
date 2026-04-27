@@ -1,35 +1,51 @@
 
-import { Code, Database, Palette, Video, Wrench, GitBranch, Server } from 'lucide-react';
+import { Code, Database, Palette, Wrench, GitBranch, Server, Cloud } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const SkillsSection = () => {
-  const technicalSkills = [
-    { name: 'HTML/CSS3', icon: <Code className="w-5 h-5" /> },
-    { name: 'JavaScript', icon: <Code className="w-5 h-5" /> },
-    { name: 'SQL', icon: <Database className="w-5 h-5" /> },
-    { name: 'Core Java', icon: <Code className="w-5 h-5" /> },
+  const backend = [
+    { name: 'Java', icon: <Code className="w-5 h-5" /> },
     { name: 'Servlets', icon: <Server className="w-5 h-5" /> },
     { name: 'JDBC', icon: <Database className="w-5 h-5" /> },
-    { name: 'REST APIs', icon: <Server className="w-5 h-5" /> },
-    { name: 'Bootstrap', icon: <Palette className="w-5 h-5" /> },
     { name: 'Spring Boot', icon: <Server className="w-5 h-5" /> },
+    { name: 'REST APIs', icon: <Server className="w-5 h-5" /> },
+    { name: 'Node.js', icon: <Server className="w-5 h-5" /> },
+  ];
+
+  const frontend = [
+    { name: 'HTML', icon: <Code className="w-5 h-5" /> },
+    { name: 'CSS', icon: <Palette className="w-5 h-5" /> },
+    { name: 'JavaScript', icon: <Code className="w-5 h-5" /> },
+    { name: 'React', icon: <Code className="w-5 h-5" /> },
+    { name: 'Bootstrap', icon: <Palette className="w-5 h-5" /> },
+  ];
+
+  const databaseSkills = [
+    { name: 'MySQL', icon: <Database className="w-5 h-5" /> },
+    { name: 'SQL', icon: <Database className="w-5 h-5" /> },
+    { name: 'PostgreSQL', icon: <Database className="w-5 h-5" /> },
     { name: 'MongoDB', icon: <Database className="w-5 h-5" /> },
-    { name: 'Git/GitHub', icon: <GitBranch className="w-5 h-5" /> }
+    { name: 'Data Cleaning', icon: <Database className="w-5 h-5" /> },
+    { name: 'Data Validation', icon: <Database className="w-5 h-5" /> },
+    { name: 'Query Optimization', icon: <Database className="w-5 h-5" /> },
+  ];
+
+  const toolsPlatforms = [
+    { name: 'Git', icon: <GitBranch className="w-5 h-5" /> },
+    { name: 'GitHub', icon: <GitBranch className="w-5 h-5" /> },
+    { name: 'GitHub Actions (CI/CD)', icon: <Cloud className="w-5 h-5" /> },
+    { name: 'Postman', icon: <Wrench className="w-5 h-5" /> },
+    { name: 'MySQL Workbench', icon: <Database className="w-5 h-5" /> },
+    { name: 'SQL Server Management Studio', icon: <Database className="w-5 h-5" /> },
   ];
 
   const developerTools = [
     { name: 'VS Code', icon: <Wrench className="w-5 h-5" /> },
     { name: 'Eclipse', icon: <Wrench className="w-5 h-5" /> },
-    { name: 'Colab', icon: <Wrench className="w-5 h-5" /> },
-    { name: 'Postman', icon: <Wrench className="w-5 h-5" /> },
-    { name: 'MySQL Workbench', icon: <Database className="w-5 h-5" /> }
   ];
 
-  const nonTechnicalSkills = [
-    { name: 'Video Editing', icon: <Video className="w-5 h-5" /> }
-  ];
-
-  const SkillCard = ({ title, skills }: { title: string; skills: typeof technicalSkills }) => (
+  type Skill = { name: string; icon: JSX.Element };
+  const SkillCard = ({ title, skills }: { title: string; skills: Skill[] }) => (
     <Card className="bg-dark-700/50 border-dark-600 hover:border-neon-blue/50 transition-all duration-300">
       <CardContent className="p-4 sm:p-6">
         <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 gradient-text">{title}</h3>
@@ -56,16 +72,18 @@ const SkillsSection = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-neon-blue to-neon-green mx-auto mb-6"></div>
           <p className="text-base sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-            A combination of technical expertise and soft skills that enable me to deliver 
-            exceptional results in every project.
+            A backend-focused, data-driven full-stack toolkit — from Java and SQL to
+            modern web frameworks, CI/CD and developer tooling.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          <SkillCard title="Technical Skills" skills={technicalSkills} />
-          <SkillCard title="Developer Tools" skills={developerTools} />
+          <SkillCard title="Backend Development" skills={backend} />
+          <SkillCard title="Frontend Development" skills={frontend} />
+          <SkillCard title="Database & Data" skills={databaseSkills} />
+          <SkillCard title="Tools & Platforms" skills={toolsPlatforms} />
           <div className="md:col-span-2 lg:col-span-1">
-            <SkillCard title="Non Technical Skills" skills={nonTechnicalSkills} />
+            <SkillCard title="Developer Tools" skills={developerTools} />
           </div>
         </div>
       </div>
