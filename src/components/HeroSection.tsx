@@ -49,10 +49,12 @@ const HeroSection = () => {
               Hi, I'm <span className="gradient-text">Daan Reddy</span>
             </h1>
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-3 sm:mb-4 px-4">
-              I design and build beautiful, responsive web experiences
+              Backend & Full Stack Developer <span className="text-neon-blue">(Data-Focused)</span>
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-400 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-              Web Developer | UI/UX Designer | Video Editor
+            <p className="text-base sm:text-lg md:text-xl text-gray-400 mb-6 sm:mb-8 max-w-3xl mx-auto px-4 leading-relaxed">
+              I build scalable web applications using Java, SQL, and modern full-stack
+              technologies, with a focus on backend architecture, efficient data handling,
+              and real-world problem solving.
             </p>
 
             {/* CTA Buttons */}

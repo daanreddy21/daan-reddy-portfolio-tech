@@ -68,14 +68,15 @@ export default {
 				},
 				// Custom portfolio colors
 				neon: {
-					blue: '#00d4ff',
-					green: '#00ff88',
-					purple: '#8b5cf6'
+					blue: 'hsl(var(--neon-blue))',
+					green: 'hsl(var(--neon-green))',
+					purple: 'hsl(var(--neon-purple))'
 				},
 				dark: {
-					900: '#0a0a0a',
-					800: '#1a1a1a',
-					700: '#2a2a2a'
+					900: 'hsl(var(--dark-900))',
+					800: 'hsl(var(--dark-800))',
+					700: 'hsl(var(--dark-700))',
+					600: 'hsl(var(--dark-600))'
 				}
 			},
 			borderRadius: {

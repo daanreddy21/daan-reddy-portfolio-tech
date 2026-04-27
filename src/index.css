@@ -46,6 +46,60 @@
     --sidebar-border: 215 28% 17%;
     --sidebar-ring: 195 100% 50%;
   }
+
+  /* Light theme palette — overrides the hardcoded dark-* and neon-* tokens
+     used throughout the portfolio so a single `light` class flips the theme. */
+  html.light {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 210 90% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 40%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+
+    --border: 214 32% 88%;
+    --input: 214 32% 88%;
+    --ring: 210 90% 45%;
+
+    /* Map the legacy neon/dark utility classes to light-mode equivalents. */
+    --neon-blue: 210 90% 45%;
+    --neon-green: 160 84% 35%;
+    --neon-purple: 262 70% 50%;
+
+    --dark-900: 0 0% 100%;
+    --dark-800: 210 40% 98%;
+    --dark-700: 210 40% 96%;
+    --dark-600: 214 32% 88%;
+
+    --text-on-dark: 222 47% 11%;
+  }
+
+  :root {
+    --neon-blue: 195 100% 50%;
+    --neon-green: 152 100% 50%;
+    --neon-purple: 262 83% 65%;
+
+    --dark-900: 0 0% 4%;
+    --dark-800: 0 0% 10%;
+    --dark-700: 0 0% 16%;
+    --dark-600: 0 0% 22%;
+
+    --text-on-dark: 210 40% 98%;
+  }
 }
 
 @layer base {
@@ -60,6 +114,20 @@
 
   html {
     scroll-behavior: smooth;
+  }
+
+  /* In light mode, remap fixed text colors used in legacy components so
+     they remain readable on light backgrounds. */
+  html.light .text-white { color: hsl(222 47% 11%) !important; }
+  html.light .text-gray-300 { color: hsl(215 16% 30%) !important; }
+  html.light .text-gray-400 { color: hsl(215 16% 40%) !important; }
+  html.light .text-gray-500 { color: hsl(215 16% 45%) !important; }
+
+  html.light .bg-dark-900\/95,
+  html.light .bg-dark-800\/95,
+  html.light .bg-dark-800\/50,
+  html.light .bg-dark-700\/50 {
+    background-color: hsl(0 0% 100% / 0.85) !important;
   }
 
   /* Custom scrollbar */

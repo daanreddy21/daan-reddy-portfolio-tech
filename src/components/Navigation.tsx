@@ -1,11 +1,13 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Download } from 'lucide-react';
+import { Menu, X, Download, Sun, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useTheme } from '@/components/ThemeProvider';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,8 +22,9 @@ const Navigation = () => {
     { label: 'About', href: '#about' },
     { label: 'Experience', href: '#experience' },
     { label: 'Skills', href: '#skills' },
-    { label: 'Services', href: '#services' },
     { label: 'Projects', href: '#projects' },
+    { label: 'Now', href: '#now' },
+    { label: 'Services', href: '#services' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -53,16 +56,23 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-center space-x-6 lg:space-x-8">
               {navItems.map((item) => (
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-gray-300 hover:text-neon-blue transition-colors duration-200 hover:glow"
+                  className="text-gray-300 hover:text-neon-blue transition-colors duration-200 hover:glow text-sm"
                 >
                   {item.label}
                 </button>
               ))}
+              <button
+                onClick={toggleTheme}
+                aria-label="Toggle theme"
+                className="p-2 rounded-md text-gray-300 hover:text-neon-blue border border-dark-600 hover:border-neon-blue/50 transition-colors duration-200"
+              >
+                {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+              </button>
               <Button
                 onClick={downloadResume}
                 className="bg-gradient-to-r from-neon-blue to-neon-green hover:from-neon-green hover:to-neon-blue transition-all duration-300"
@@ -74,7 +84,14 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            <button
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+              className="p-2 text-gray-300 hover:text-neon-blue transition-colors duration-200"
+            >
+              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-neon-blue transition-colors duration-200"
