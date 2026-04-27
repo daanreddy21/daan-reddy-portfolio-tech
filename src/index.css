@@ -116,6 +116,20 @@
     scroll-behavior: smooth;
   }
 
+  /* In light mode, remap fixed text colors used in legacy components so
+     they remain readable on light backgrounds. */
+  html.light .text-white { color: hsl(222 47% 11%) !important; }
+  html.light .text-gray-300 { color: hsl(215 16% 30%) !important; }
+  html.light .text-gray-400 { color: hsl(215 16% 40%) !important; }
+  html.light .text-gray-500 { color: hsl(215 16% 45%) !important; }
+
+  html.light .bg-dark-900\/95,
+  html.light .bg-dark-800\/95,
+  html.light .bg-dark-800\/50,
+  html.light .bg-dark-700\/50 {
+    background-color: hsl(0 0% 100% / 0.85) !important;
+  }
+
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
