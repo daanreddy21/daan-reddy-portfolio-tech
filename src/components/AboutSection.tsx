@@ -53,7 +53,7 @@ const AboutSection = () => {
                 </AspectRatio>
                 <div className="mt-4 sm:mt-6 text-center">
                   <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Daan Reddy A</h3>
-                  <p className="text-neon-blue font-medium text-sm sm:text-base">Web Developer & UI/UX Designer</p>
+                  <p className="text-neon-blue font-medium text-sm sm:text-base">Backend & Full Stack Developer</p>
                   <div className="flex justify-center items-center space-x-2 mt-3 sm:mt-4">
                     <div className="w-2 h-2 bg-neon-green rounded-full animate-pulse"></div>
                     <span className="text-neon-green text-xs sm:text-sm">Available for projects</span>
@@ -68,26 +68,46 @@ const AboutSection = () => {
             {/* Text Content */}
             <div className="space-y-4 sm:space-y-6">
               <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                I'm a passionate web designer and aspiring full-stack developer who thrives on creating 
-                beautiful, functional digital experiences. My journey combines technical expertise in 
-                UI/UX design, web development, and digital content editing to deliver solutions that 
-                truly satisfy clients.
-              </p>
-              
-              <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                What drives me is an insatiable curiosity for learning and problem-solving. I stay at 
-                the forefront of tech trends through continuous self-improvement, diving into books, 
-                leveraging AI tools, and engaging with the development community.
+                I'm an aspiring <span className="text-neon-blue font-medium">Backend-Focused Full Stack Developer</span> with
+                strong skills in Java, SQL, and web application development. I have hands-on
+                experience building real-world systems such as a healthcare management
+                system and a banking application using JSP, Servlets, and MySQL.
               </p>
 
               <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                Beyond coding, I'm fascinated by electronics, love exploring new technologies, and 
-                find inspiration in music. My adaptability and dedication to helping others fuel my 
-                commitment to creating impactful digital solutions.
+                I specialize in backend development, structured data handling, and writing
+                optimized SQL queries. I have experience designing scalable applications
+                using MVC architecture and ensuring clean and efficient data flow across
+                systems.
+              </p>
+
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+                Along with backend development, I have working knowledge of frontend
+                technologies like HTML, CSS, JavaScript, and React, enabling me to build
+                complete end-to-end applications.
+              </p>
+
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+                Currently, I am developing a <span className="text-neon-green">Code Analysis Tool</span> that
+                detects code quality issues such as indentation, spacing, and formatting
+                inconsistencies, and provides suggestions to improve coding standards and
+                readability.
+              </p>
+
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+                I also have hands-on experience working as a Software Developer Intern,
+                contributing to full-stack development using React, Node.js, and PostgreSQL,
+                integrating frontend with backend APIs for real-time applications.
+              </p>
+
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+                I am continuously improving my skills in cloud technologies like AWS,
+                CI/CD pipelines, and modern development practices to build scalable,
+                efficient, and data-driven applications.
               </p>
 
               <div className="flex flex-wrap gap-2 sm:gap-3 pt-4">
-                {['Web Development', 'UI/UX Design', 'Video Editing', 'Problem Solving', 'AI Tools'].map((skill) => (
+                {['Backend Development', 'Java & Spring Boot', 'SQL & Data Handling', 'MVC Architecture', 'React & Node.js', 'CI/CD'].map((skill) => (
                   <span 
                     key={skill}
                     className="px-3 sm:px-4 py-1.5 sm:py-2 bg-dark-700 border border-neon-blue/30 rounded-full text-neon-blue text-xs sm:text-sm hover:bg-neon-blue/10 transition-colors duration-200"
