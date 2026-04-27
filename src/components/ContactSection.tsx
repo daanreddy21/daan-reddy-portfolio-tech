@@ -99,7 +99,7 @@ const ContactSection = () => {
     {
       icon: <Linkedin className="w-6 h-6" />,
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/daan-reddy-a-13a9952a8',
+      href: 'https://www.linkedin.com/in/daanreddya-21ma05/',
       color: 'neon-green'
     }
   ];

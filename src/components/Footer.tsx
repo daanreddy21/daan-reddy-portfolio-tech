@@ -53,7 +53,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com/in/daan-reddy-a-13a9952a8"
+                href="https://www.linkedin.com/in/daanreddya-21ma05/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-neon-blue transition-colors duration-200 transform hover:scale-110"
